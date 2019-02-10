@@ -73,6 +73,7 @@ public class Parser {
             result = Integer.parseInt(curr.getValue());
             nextLexeme();
         } else if (curr.getType() == Lexeme.LexemeType.LEFT_BRACKET) {
+            nextLexeme();
             result = executeExpression();
             if (curr.getType() != Lexeme.LexemeType.RIGHT_BRACKET) {
                 throw new ParseException(
