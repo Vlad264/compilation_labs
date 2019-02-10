@@ -1,7 +1,7 @@
-package ru.nsu.bashev.main;
+package main.ru.nsu.bashev.main;
 
-import ru.nsu.bashev.lexer.Lexer;
-import ru.nsu.bashev.lexer.Parser;
+import main.ru.nsu.bashev.lexer.Lexer;
+import main.ru.nsu.bashev.lexer.Parser;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

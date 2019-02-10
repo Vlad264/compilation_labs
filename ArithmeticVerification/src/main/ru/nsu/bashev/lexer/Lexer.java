@@ -1,10 +1,10 @@
-package ru.nsu.bashev.lexer;
+package main.ru.nsu.bashev.lexer;
 
 import java.io.IOException;
 import java.io.Reader;
 import java.text.ParseException;
 
-import static ru.nsu.bashev.lexer.Lexeme.LexemeType.*;
+import static main.ru.nsu.bashev.lexer.Lexeme.LexemeType.*;
 
 public class Lexer {
 
@@ -63,7 +63,9 @@ public class Lexer {
     }
 
     private void nextChar() throws IOException {
-        curr = reader.read();
+        do {
+            curr = reader.read();
+        } while (curr == ' ' || curr == '\t');
         pos++;
     }
 }

@@ -1,9 +1,7 @@
-package ru.nsu.bashev.lexer;
+package main.ru.nsu.bashev.lexer;
 
 import java.io.IOException;
 import java.text.ParseException;
-
-import static ru.nsu.bashev.lexer.Lexeme.LexemeType.*;
 
 public class Parser {
 
@@ -17,9 +15,6 @@ public class Parser {
     public int executeCalculation() throws IOException, ParseException {
         nextLexeme();
         int result = executeExpression();
-        /*if (curr.getType() != EOF) {
-            throw new ParseException("Miss EOF", curr.getPosition());
-        }*/
         return result;
     }
 
@@ -27,9 +22,9 @@ public class Parser {
         int result = executeTerm();
         Lexeme.LexemeType type = curr.getType();
 
-        while (type == PLUS || type == MINUS) {
+        while (type == Lexeme.LexemeType.PLUS || type == Lexeme.LexemeType.MINUS) {
             nextLexeme();
-            if (type == PLUS) {
+            if (type == Lexeme.LexemeType.PLUS) {
                 result += executeTerm();
             } else {
                 result -= executeTerm();
@@ -43,9 +38,9 @@ public class Parser {
         int result = executeFractal();
         Lexeme.LexemeType type = curr.getType();
 
-        while (type == MULTIPLICATION || type == DIVISION) {
+        while (type == Lexeme.LexemeType.MULTIPLICATION || type == Lexeme.LexemeType.DIVISION) {
             nextLexeme();
-            if (type == MULTIPLICATION) {
+            if (type == Lexeme.LexemeType.MULTIPLICATION) {
                 result *= executeTerm();
             } else {
                 result /= executeTerm();
@@ -57,7 +52,7 @@ public class Parser {
 
     private int executeFractal() throws IOException, ParseException {
         int result = executePower();
-        if (curr.getType() == POWER) {
+        if (curr.getType() == Lexeme.LexemeType.POWER) {
             nextLexeme();
             result = (int) Math.pow(result, executeFractal());
         }
@@ -65,7 +60,7 @@ public class Parser {
     }
 
     private int executePower() throws IOException, ParseException {
-        if (curr.getType() == MINUS) {
+        if (curr.getType() == Lexeme.LexemeType.MINUS) {
             nextLexeme();
             return -executeAtom();
         }
@@ -74,12 +69,12 @@ public class Parser {
 
     private int executeAtom() throws IOException, ParseException {
         int result;
-        if (curr.getType() == NUMBER) {
+        if (curr.getType() == Lexeme.LexemeType.NUMBER) {
             result = Integer.parseInt(curr.getValue());
             nextLexeme();
-        } else if (curr.getType() == LEFT_BRACKET) {
+        } else if (curr.getType() == Lexeme.LexemeType.LEFT_BRACKET) {
             result = executeExpression();
-            if (curr.getType() != RIGHT_BRACKET) {
+            if (curr.getType() != Lexeme.LexemeType.RIGHT_BRACKET) {
                 throw new ParseException(
                         String.format("Miss close bracket on position: %d", curr.getPosition()),
                         curr.getPosition());

@@ -1,4 +1,4 @@
-package ru.nsu.bashev.lexer;
+package main.ru.nsu.bashev.lexer;
 
 public class Lexeme {
 
