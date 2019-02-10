@@ -41,7 +41,13 @@ public class LexerTest {
         Lexer lexer = new Lexer(new StringReader(input));
         try {
             for (int value : values) {
-                assertEquals(value, Integer.parseInt(lexer.nextLexeme().getValue()));
+                Lexeme lexeme;
+                do {
+                    lexeme = lexer.nextLexeme();
+                } while (lexeme.getType() != NUMBER && lexeme.getType() != EOF);
+                if (lexeme.getType() == NUMBER) {
+                    assertEquals(value, Integer.parseInt(lexeme.getValue()));
+                }
             }
         } catch (IOException | ParseException e) {
             fail();

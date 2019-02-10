@@ -11,6 +11,7 @@ public class Lexer {
     private final Reader reader;
     private int curr;
     private int pos = 0;
+    private boolean flag = false;
 
     public Lexer(Reader reader) {
         this.reader = reader;
@@ -19,8 +20,6 @@ public class Lexer {
     public Lexeme nextLexeme() throws IOException, ParseException {
         nextChar();
         switch (curr) {
-            case ' ':
-                return nextLexeme();
             case '1':
             case '2':
             case '3':
@@ -59,10 +58,15 @@ public class Lexer {
             number.append((char) curr);
             nextChar();
         }
+        flag = true;
         return number.toString();
     }
 
     private void nextChar() throws IOException {
+        if (flag) {
+            flag = false;
+            return;
+        }
         do {
             curr = reader.read();
         } while (curr == ' ' || curr == '\t');
