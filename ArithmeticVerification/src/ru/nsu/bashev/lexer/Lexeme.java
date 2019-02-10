@@ -5,11 +5,11 @@ public class Lexeme {
     private final LexemeType type;
     private final String value;
 
-    public Lexeme(LexemeType type) {
+    Lexeme(LexemeType type) {
         this(type, "");
     }
 
-    public Lexeme(LexemeType type, String value) {
+    Lexeme(LexemeType type, String value) {
         this.type = type;
         this.value = value;
     }
@@ -25,7 +25,7 @@ public class Lexeme {
     public enum LexemeType {
         NUMBER,
         PLUS,
-        MINUX,
+        MINUS,
         MULTIPLICATION,
         DIVISION,
         POWER,
