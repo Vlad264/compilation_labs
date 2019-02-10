@@ -1,9 +1,26 @@
 package ru.nsu.bashev.main;
 
+import ru.nsu.bashev.lexer.Lexer;
+import ru.nsu.bashev.lexer.Parser;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello, world!!!");
+        Lexer lexer = new Lexer(new InputStreamReader(System.in));
+        Parser parser = new Parser(lexer);
+
+        try {
+            int result = parser.executeCalculation();
+            System.out.println("Answer: " + result);
+        } catch (IOException e) {
+            System.err.println("IOException happened: " + e.getLocalizedMessage());
+        } catch (ParseException e) {
+            System.err.println("ParseException happened: " + e.getLocalizedMessage());
+        }
     }
 
 }

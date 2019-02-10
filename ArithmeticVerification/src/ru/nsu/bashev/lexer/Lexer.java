@@ -19,33 +19,35 @@ public class Lexer {
     public Lexeme nextLexeme() throws IOException, ParseException {
         nextChar();
         switch (curr) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 0:
-                return new Lexeme(NUMBER, nextNumber());
+            case ' ':
+                return nextLexeme();
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '0':
+                return new Lexeme(NUMBER, pos, nextNumber());
             case '+':
-                return new Lexeme(PLUS);
+                return new Lexeme(PLUS, pos);
             case '-':
-                return new Lexeme(MINUS);
+                return new Lexeme(MINUS, pos);
             case '*':
-                return new Lexeme(MULTIPLICATION);
+                return new Lexeme(MULTIPLICATION, pos);
             case '/':
-                return new Lexeme(DIVISION);
+                return new Lexeme(DIVISION, pos);
             case '^':
-                return new Lexeme(POWER);
+                return new Lexeme(POWER, pos);
             case '(':
-                return new Lexeme(LEFT_BRACKET);
+                return new Lexeme(LEFT_BRACKET, pos);
             case ')':
-                return new Lexeme(RIGHT_BRACKET);
+                return new Lexeme(RIGHT_BRACKET, pos);
             case -1:
-                return new Lexeme(NONE);
+                return new Lexeme(EOF, pos);
             default:
                 throw new ParseException(String.format("Unknown character: \'%c\' on position: %d", curr, pos), pos);
         }
@@ -54,7 +56,7 @@ public class Lexer {
     private String nextNumber() throws IOException {
         StringBuilder number = new StringBuilder();
         while (Character.isDigit(curr)) {
-            number.append(curr);
+            number.append((char) curr);
             nextChar();
         }
         return number.toString();
