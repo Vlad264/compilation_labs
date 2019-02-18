@@ -1,11 +1,13 @@
 package ru.nsu.bashev.machine;
 
+import com.sun.istack.internal.NotNull;
+
 import java.io.Reader;
 import java.util.*;
 
 public class StateParser {
 
-    public static StatesInfo parseFrom(Reader reader) {
+    public static StatesInfo parseFrom(@NotNull Reader reader) {
         Map<Integer, Map<Character, Integer>> transitions = new HashMap<>();
         Set<Integer> finalStates = new HashSet<>();
         Scanner scanner = new Scanner(reader);

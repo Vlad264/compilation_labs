@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
-public class StatesInfo {
+class StatesInfo {
 
     private final Map<Integer, Map<Character, Integer>> transitions;
     private final Set<Integer> finalStates;
@@ -19,7 +19,7 @@ public class StatesInfo {
         }
     }
 
-    public State nextState(char transition) {
+    void nextState(char transition) {
         Map<Character, Integer> targets = transitions.get(currentState.getId());
         if (targets == null) {
             throw new IllegalArgumentException(
@@ -31,6 +31,9 @@ public class StatesInfo {
                     String.format("There are not transit from %d by %c", currentState.getId(), transition));
         }
         currentState = new State(nextState, finalStates.contains(nextState));
+    }
+
+    State getLastState() {
         return currentState;
     }
 
