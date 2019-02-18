@@ -1,6 +1,7 @@
 package ru.nsu.bashev.machine;
 
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class StatesInfo {
@@ -26,7 +27,7 @@ public class StatesInfo {
         }
         Integer nextState = targets.get(transition);
         if (nextState == null) {
-            throw new IllegalArgumentException(
+            throw new NoSuchElementException(
                     String.format("There are not transit from %d by %c", currentState.getId(), transition));
         }
         currentState = new State(nextState, finalStates.contains(nextState));
