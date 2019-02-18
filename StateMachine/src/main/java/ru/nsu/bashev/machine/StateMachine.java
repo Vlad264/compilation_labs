@@ -13,7 +13,7 @@ public class StateMachine {
         this.states = states;
     }
 
-    public boolean isValideInput(@NotNull Reader reader) throws IOException {
+    public boolean isValidInput(@NotNull Reader reader) throws IOException {
         int buff;
         while ((buff = reader.read()) != -1) {
             states.nextState((char) buff);

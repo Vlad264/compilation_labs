@@ -18,7 +18,7 @@ public class StateParser {
                 finalStates.add(Integer.parseInt(str));
             }
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("It's not a final state");
+            throw new IllegalArgumentException("It is't a final state (bad symbol)");
         }
 
         try {

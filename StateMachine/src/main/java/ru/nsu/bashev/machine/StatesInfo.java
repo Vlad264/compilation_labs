@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
-class StatesInfo {
+public class StatesInfo {
 
     private final Map<Integer, Map<Character, Integer>> transitions;
     private final Set<Integer> finalStates;
