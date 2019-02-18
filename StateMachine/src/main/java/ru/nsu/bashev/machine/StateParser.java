@@ -1,13 +1,11 @@
 package ru.nsu.bashev.machine;
 
-import com.sun.istack.internal.NotNull;
-
 import java.io.Reader;
 import java.util.*;
 
 public class StateParser {
 
-    public static StatesInfo parseFrom(@NotNull Reader reader) {
+    public static StatesInfo parseFrom(Reader reader) {
         Map<Integer, Map<Character, Integer>> transitions = new HashMap<>();
         Set<Integer> finalStates = new HashSet<>();
         Scanner scanner = new Scanner(reader);
@@ -15,7 +13,9 @@ public class StateParser {
         try {
             String[] states = scanner.nextLine().split("[ ]");
             for (String str : states) {
-                finalStates.add(Integer.parseInt(str));
+                if (!str.isEmpty()) {
+                    finalStates.add(Integer.parseInt(str));
+                }
             }
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("It is't a final state (bad symbol)");
@@ -29,6 +29,7 @@ public class StateParser {
                 Map<Character, Integer> targets = transitions.get(from);
                 if (targets == null) {
                     targets = new HashMap<>();
+                    transitions.put(from, targets);
                 }
                 for (char c : str.toCharArray()) {
                     targets.put(c, to);
