@@ -50,17 +50,29 @@ public class StatesInfoTest {
     }
 
     @Test
-    public void nextStateGood() {
+    public void nextStateGoodSingle() {
         assertGood(states("", "1 a 2"), tr(2, 'a'));
+    }
+
+    @Test
+    public void nextStateGoodChose() {
         assertGood(states("", "1 a 2", "1 b 3"), tr(2, 'a'));
         assertGood(states("", "1 a 2", "1 b 3"), tr(3, 'b'));
+    }
+
+    @Test
+    public void nextStateGoodSequence() {
         assertGood(states("", "1 a 2", "2 a 3"), tr(2, 'a'), tr(3, 'a'));
         assertGood(states("", "1 a 2", "2 a 3", "3 a 4"), tr(2, 'a'), tr(3, 'a'), tr(4, 'a'));
     }
 
     @Test
-    public void nextStateBad() {
+    public void nextStateBadNoTransit() {
         assertBad(states("", "1 a 2"), 3, tr(2, 'a'), tr(3, 'a'));
+    }
+
+    @Test
+    public void nextStateBadNoNeededTransit() {
         assertBad(states("", "1 a 2", "2 b 3"), 3, tr(2, 'a'), tr(3, 'a'));
     }
 
