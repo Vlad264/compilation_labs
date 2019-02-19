@@ -19,7 +19,7 @@ public class StatesInfo {
         }
     }
 
-    void nextState(char transition) {
+     void nextState(char transition) {
         Map<Character, Integer> targets = transitions.get(currentState.getId());
         if (targets == null) {
             throw new IllegalArgumentException(

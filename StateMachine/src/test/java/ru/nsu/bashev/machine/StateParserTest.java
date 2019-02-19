@@ -8,29 +8,20 @@ import static org.junit.Assert.*;
 
 public class StateParserTest {
 
-    void assertGood(String... lines) {
-        /*for (String str : lines) {
-            str += '\n';
-        }*/
-
+    private void assertGood(String... lines) {
         try {
             StateParser.parseFrom(new StringReader(String.join("\n", lines)));
-            assertTrue(true);
         } catch (Exception e) {
             fail();
         }
     }
 
-    void assertBad(String... lines) {
-        for (String str : lines) {
-            str += '\n';
-        }
-
+    private void assertBad(String... lines) {
         try {
             StateParser.parseFrom(new StringReader(String.join("\n", lines)));
             fail();
-        } catch (Exception e) {
-            assertTrue(true);
+        } catch (Exception ignore) {
+
         }
     }
 
