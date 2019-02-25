@@ -1,20 +1,20 @@
 package ru.nsu.bashev.machine;
 
-class State {
+public class State {
 
     private final int id;
     private final boolean isFinal;
 
-    State(int id, boolean isFinal) {
+    public State(int id, boolean isFinal) {
         this.id = id;
         this.isFinal = isFinal;
     }
 
-    int getId() {
+    public int getId() {
         return id;
     }
 
-    boolean isFinal() {
+    public boolean isFinal() {
         return isFinal;
     }
 }

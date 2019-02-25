@@ -10,7 +10,7 @@ public class StateParserTest {
 
     private void assertGood(String... lines) {
         try {
-            StateParser.parseFrom(new StringReader(String.join("\n", lines)));
+            StateParser.parseDeterminateFrom(new StringReader(String.join("\n", lines)));
         } catch (Exception e) {
             fail();
         }
@@ -18,7 +18,7 @@ public class StateParserTest {
 
     private void assertBad(String... lines) {
         try {
-            StateParser.parseFrom(new StringReader(String.join("\n", lines)));
+            StateParser.parseDeterminateFrom(new StringReader(String.join("\n", lines)));
             fail();
         } catch (Exception ignore) {
 

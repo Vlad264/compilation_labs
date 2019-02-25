@@ -1,16 +1,17 @@
 package ru.nsu.bashev.machine;
 
 import org.junit.Test;
+import ru.nsu.bashev.machine.determinate.DeterminateStateMachine;
 
 import java.io.StringReader;
 
 import static org.junit.Assert.*;
 
-public class StateMachineTest {
+public class DeterminateStateMachineTest {
 
-    private StateMachine machine(String... lines) {
+    private DeterminateStateMachine machine(String... lines) {
         try {
-            return new StateMachine(StateParser.parseFrom(new StringReader(String.join("\n", lines))));
+            return new DeterminateStateMachine(StateParser.parseDeterminateFrom(new StringReader(String.join("\n", lines))));
         } catch (Exception e) {
             fail();
         }

@@ -1,16 +1,18 @@
-package ru.nsu.bashev.machine;
+package ru.nsu.bashev.machine.determinate;
+
+import ru.nsu.bashev.machine.State;
 
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
-public class StatesInfo {
+public class DeterminateStatesInfo {
 
     private final Map<Integer, Map<Character, Integer>> transitions;
     private final Set<Integer> finalStates;
     private State currentState;
 
-    StatesInfo(Map<Integer, Map<Character, Integer>> transitions, Set<Integer> finalStates) {
+    public DeterminateStatesInfo(Map<Integer, Map<Character, Integer>> transitions, Set<Integer> finalStates) {
         this.transitions = transitions;
         this.finalStates = finalStates;
         currentState = new State(1, finalStates.contains(1));
@@ -19,7 +21,7 @@ public class StatesInfo {
         }
     }
 
-     void nextState(char transition) {
+    public void nextState(char transition) {
         Map<Character, Integer> targets = transitions.get(currentState.getId());
         if (targets == null) {
             throw new IllegalArgumentException(
@@ -33,7 +35,7 @@ public class StatesInfo {
         currentState = new State(nextState, finalStates.contains(nextState));
     }
 
-    State getLastState() {
+    public State getLastState() {
         return currentState;
     }
 

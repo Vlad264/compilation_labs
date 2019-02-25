@@ -1,16 +1,18 @@
 package ru.nsu.bashev.machine;
 
 import org.junit.Test;
+import ru.nsu.bashev.machine.determinate.DeterminateStatesInfo;
 
 import java.io.StringReader;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
-public class StatesInfoTest {
+public class DeterminateStatesInfoTest {
 
-    private StatesInfo states(String... lines) {
+    private DeterminateStatesInfo states(String... lines) {
         try {
-            return StateParser.parseFrom(new StringReader(String.join("\n", lines)));
+            return StateParser.parseDeterminateFrom(new StringReader(String.join("\n", lines)));
         } catch (Exception e) {
             fail();
         }
@@ -21,7 +23,7 @@ public class StatesInfoTest {
         return new Transit(id, tr);
     }
 
-    private void assertGood(StatesInfo states, Transit... transits) {
+    private void assertGood(DeterminateStatesInfo states, Transit... transits) {
         try {
             for (Transit tr : transits) {
                 states.nextState(tr.tr);
@@ -32,7 +34,7 @@ public class StatesInfoTest {
         }
     }
 
-    private void assertBad(StatesInfo states, int failId, Transit... transits) {
+    private void assertBad(DeterminateStatesInfo states, int failId, Transit... transits) {
         boolean flag = false;
         for (Transit tr : transits) {
             try {

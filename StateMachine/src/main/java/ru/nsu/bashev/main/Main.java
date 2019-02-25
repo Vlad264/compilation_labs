@@ -1,8 +1,8 @@
 package ru.nsu.bashev.main;
 
-import ru.nsu.bashev.machine.StateMachine;
 import ru.nsu.bashev.machine.StateParser;
-import ru.nsu.bashev.machine.StatesInfo;
+import ru.nsu.bashev.machine.determinate.DeterminateStateMachine;
+import ru.nsu.bashev.machine.determinate.DeterminateStatesInfo;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,9 +16,9 @@ public class Main {
             System.exit(-1);
         }
 
-        StatesInfo statesInfo = null;
+        DeterminateStatesInfo statesInfo = null;
         try {
-            statesInfo = StateParser.parseFrom(new FileReader(args[0]));
+            statesInfo = StateParser.parseDeterminateFrom(new FileReader(args[0]));
         } catch (FileNotFoundException e) {
             System.out.println(String.format("File \"%s\" not found", args[0]));
             System.exit(1);
@@ -27,10 +27,10 @@ public class Main {
             System.exit(1);
         }
 
-        StateMachine stateMachine = new StateMachine(statesInfo);
+        DeterminateStateMachine determinateStateMachine = new DeterminateStateMachine(statesInfo);
         boolean result = false;
         try {
-            result = stateMachine.isValidInput(new FileReader(args[1]));
+            result = determinateStateMachine.isValidInput(new FileReader(args[1]));
         } catch (FileNotFoundException e) {
             System.out.println(String.format("File \"%s\" not found", args[0]));
             System.exit(1);

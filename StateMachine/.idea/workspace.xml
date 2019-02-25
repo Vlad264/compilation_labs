@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="241bbb6e-9426-4d99-a8bb-ecd8bd25fe39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateMachineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStatesInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StatesInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StatesInfoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StatesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStatesInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStateMachineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StatesInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStatesInfoTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -24,29 +34,33 @@
     <session id="-1494959905">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="java" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3241" />
+          <entry key="dummy" value="26" />
+          <entry key="java" value="4012" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3241" />
+          <entry key="JAVA" value="4012" />
+          <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
     </session>
@@ -56,10 +70,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state relative-caret-position="57">
+              <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStateMachine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStateMachine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStatesInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1319#1320#0" expanded="true" />
+                <element signature="e#1352#1353#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="133">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateMachineTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStateMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="797">
-              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="931">
+              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -89,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+            <state relative-caret-position="114">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,25 +154,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StatesInfo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStatesInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StatesInfoTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStatesInfoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="133">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding>
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
                 <element signature="e#1282#1283#0" expanded="true" />
                 <element signature="e#1341#1342#0" expanded="true" />
                 <element signature="e#1802#1803#0" expanded="true" />
@@ -138,22 +179,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/State.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -457,14 +489,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/State.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StatesInfo.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StatesInfoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateMachineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStateMachineTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StatesInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/State.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/nondeterminate/NotDeterminateStateMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/StatesInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/ВeterminateStatesInfo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStatesInfoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStateMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStatesInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStatesInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStateMachine.java" />
       </list>
     </option>
   </component>
@@ -486,6 +527,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -535,6 +577,26 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bashev" type="462c0819:PsiDirectoryNode" />
+              <item name="machine" type="462c0819:PsiDirectoryNode" />
+              <item name="determinate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StateMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StateMachine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bashev" type="462c0819:PsiDirectoryNode" />
+              <item name="machine" type="462c0819:PsiDirectoryNode" />
+              <item name="notdeterminate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StateMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StateMachine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bashev" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -566,15 +628,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550593953621" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551118900232" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -584,6 +646,10 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ru.nsu.bashev.machine" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.nsu.bashev.machine.notdeterminate" />
+      <recent name="ru.nsu.bashev.machine.nondeterminate" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -601,17 +667,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StateMachineTest">
-    <configuration name="StateMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="DeterminateStateMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StateMachine_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.nsu.bashev.machine.*" />
+          <option name="PATTERN" value="ru.nsu.bashev.machine.determinate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.nsu.bashev.machine" />
-      <option name="MAIN_CLASS_NAME" value="ru.nsu.bashev.machine.StateMachineTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.bashev.machine.DeterminateStateMachineTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeterminateStatesInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StateMachine_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nsu.bashev.machine.determinate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nsu.bashev.machine" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.bashev.machine.DeterminateStatesInfoTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -620,7 +700,7 @@
       <module name="StateMachine_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.nsu.bashev.machine.*" />
+          <option name="PATTERN" value="ru.nsu.bashev.machine.determinate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -630,29 +710,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StatesInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StateMachine_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.nsu.bashev.machine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.nsu.bashev.machine" />
-      <option name="MAIN_CLASS_NAME" value="ru.nsu.bashev.machine.StatesInfoTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.StateParserTest" />
-      <item itemvalue="JUnit.StatesInfoTest" />
-      <item itemvalue="JUnit.StateMachineTest" />
+      <item itemvalue="JUnit.DeterminateStatesInfoTest" />
+      <item itemvalue="JUnit.DeterminateStateMachineTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StateMachineTest" />
-        <item itemvalue="JUnit.StatesInfoTest" />
+        <item itemvalue="JUnit.DeterminateStateMachineTest" />
+        <item itemvalue="JUnit.DeterminateStatesInfoTest" />
         <item itemvalue="JUnit.StateParserTest" />
       </list>
     </recent_temporary>
@@ -668,17 +734,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550502708971</updated>
       <workItem from="1550502715296" duration="9970000" />
-      <workItem from="1550591861881" duration="2073000" />
+      <workItem from="1550591861881" duration="2249000" />
+      <workItem from="1551113523058" duration="3235000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StateParserTest - 2019.02.19 at 00h 38m 22s.xml">
-      <configuration name="StateParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StateParserTest - 2019.02.19 at 00h 38m 26s.xml">
-      <configuration name="StateParserTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StateParserTest - 2019.02.19 at 00h 39m 50s.xml">
       <configuration name="StateParserTest" configurationId="JUnit" />
     </history-entry>
@@ -703,15 +764,21 @@
     <history-entry file="StatesInfoTest - 2019.02.19 at 23h 17m 49s.xml">
       <configuration name="StatesInfoTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StateMachineTest - 2019.02.19 at 23h 32m 26s.xml">
+      <configuration name="StateMachineTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeterminateStateMachineTest - 2019.02.26 at 01h 10m 19s.xml">
+      <configuration name="DeterminateStateMachineTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12043000" />
+    <option name="totallyTimeSpent" value="15454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -765,37 +832,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="38">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StatesInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/ВeterminateStatesInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -809,13 +862,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StatesInfoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="133">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding>
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStatesInfoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
             <element signature="e#1282#1283#0" expanded="true" />
             <element signature="e#1341#1342#0" expanded="true" />
             <element signature="e#1802#1803#0" expanded="true" />
@@ -826,20 +887,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="57">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/DeterminateStateMachineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/StateParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/nsu/bashev/machine/StateMachineTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStatesInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        <state relative-caret-position="190">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/determinate/DeterminateStateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStatesInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nsu/bashev/machine/notdeterminate/NotDeterminateStateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
