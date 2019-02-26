@@ -30,7 +30,7 @@ public class NotDeterminateStateMachine implements StateMachine {
         }
         for (State state : currentStates) {
             if (state.isFinal()) {
-                return false;
+                return true;
             }
         }
         return false;

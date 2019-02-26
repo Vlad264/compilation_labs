@@ -1,6 +1,7 @@
-package ru.nsu.bashev.machine;
+package ru.nsu.bashev.machine.determinate;
 
 import org.junit.Test;
+import ru.nsu.bashev.machine.StateParser;
 import ru.nsu.bashev.machine.determinate.DeterminateStateMachine;
 
 import java.io.StringReader;

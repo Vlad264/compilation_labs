@@ -11,6 +11,7 @@ public class StateParserTest {
     private void assertGood(String... lines) {
         try {
             StateParser.parseDeterminateFrom(new StringReader(String.join("\n", lines)));
+            StateParser.parseNotDeterminateFrom(new StringReader(String.join("\n", lines)));
         } catch (Exception e) {
             fail();
         }
@@ -20,9 +21,11 @@ public class StateParserTest {
         try {
             StateParser.parseDeterminateFrom(new StringReader(String.join("\n", lines)));
             fail();
-        } catch (Exception ignore) {
-
-        }
+        } catch (Exception ignore) { }
+        try {
+            StateParser.parseNotDeterminateFrom(new StringReader(String.join("\n", lines)));
+            fail();
+        } catch (Exception ignore) { }
     }
 
     @Test
