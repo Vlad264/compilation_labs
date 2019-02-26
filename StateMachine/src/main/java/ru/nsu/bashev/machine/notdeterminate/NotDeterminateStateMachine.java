@@ -5,8 +5,8 @@ import ru.nsu.bashev.machine.StateMachine;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class NotDeterminateStateMachine implements StateMachine {
 
@@ -18,21 +18,17 @@ public class NotDeterminateStateMachine implements StateMachine {
 
     @Override
     public boolean isValidInput(Reader reader) throws IOException {
-        List<State> stack = new LinkedList<>();
-        stack.add(states.getFirstState());
+        Set<State> currentStates = new HashSet<>();
+        currentStates.add(states.getFirstState());
         int buff;
 
         while ((buff = reader.read()) != -1) {
-            List<State> newStack = new LinkedList<>();
-            for (State state : stack) {
-                newStack.addAll(states.nextStates(state, (char) buff));
-            }
-            stack = newStack;
-            if (stack.isEmpty()) {
+            currentStates = states.nextStates(currentStates, (char) buff);
+            if (currentStates.isEmpty()) {
                 return false;
             }
         }
-        for (State state : stack) {
+        for (State state : currentStates) {
             if (state.isFinal()) {
                 return false;
             }

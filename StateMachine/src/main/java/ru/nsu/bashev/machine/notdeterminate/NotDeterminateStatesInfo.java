@@ -17,19 +17,21 @@ public class NotDeterminateStatesInfo {
         }
     }
 
-    public List<State> nextStates(State start, char transition) {
-        Map<Character, List<Integer>> targets = transitions.get(start.getId());
-        if (targets == null) {
-            throw new IllegalArgumentException(
-                    String.format("There are not transit for %d state", start.getId()));
-        }
-        List<Integer> nextStates = targets.get(transition);
-        if (nextStates == null) {
-            return new LinkedList<>();
-        }
-        List<State> result = new LinkedList<>();
-        for (int state : nextStates) {
-            result.add(new State(state, finalStates.contains(state)));
+    public Set<State> nextStates(Set<State> startStates, char transition) {
+        Set<State> result = new HashSet<>();
+        for (State state : startStates) {
+            Map<Character, List<Integer>> targets = transitions.get(state.getId());
+            if (targets == null) {
+                throw new IllegalArgumentException(
+                        String.format("There are not transit for %d state", state.getId()));
+            }
+            List<Integer> nextStates = targets.get(transition);
+            if (nextStates == null) {
+                continue;
+            }
+            for (int next : nextStates) {
+                result.add(new State(next, finalStates.contains(next)));
+            }
         }
         return result;
     }
